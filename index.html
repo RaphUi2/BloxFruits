@@ -9,7 +9,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: linear-gradient(180deg, #000000 0%, #001f3f 40%, #0074D9 100%);
+     background: linear-gradient(180deg, #000000 0%, #001f3f 40%, #0066cc 100%);
       color: white;
       overflow-x: hidden;
     }header {
@@ -55,9 +55,9 @@ nav a:hover {
   background: url() center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: Up;
+  align-items: Up;
+  text-align: Up;
   padding-top: 100px;
 }
 
@@ -68,7 +68,7 @@ nav a:hover {
 
 .hero button {
   margin-top: 20px;
-  padding: 12px 30px;
+  padding: 15px 5px;
   font-size: 1.2em;
   border: none;
   border-radius: 8px;
@@ -106,6 +106,14 @@ nav a:hover {
   transition: 0.3s;
 }
 
+.fruit-cardGuides {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding : 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
 .fruit-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px #00d4ff;
@@ -127,31 +135,31 @@ footer {
     </nav>
   </header>  <section id="accueil" class="hero">
     <h2>Bienvenue sur le fan site de Blox Fruits !</h2>
-    <p>Découvre les meilleurs fruits, astuces et secrets du jeu Roblox Blox Fruits.</p>
+    <p>Découvre les meilleurs fruits, astuces et secrets de Blox Fruits.</p>
     <button id="exploreBtn">Explorer</button>
   </section>  <section id="News" class="content">
     <h2> Update du site</h2> 
     <div class="fruits-grid">
-        <div class="fruit-card"><h3>Update 2</h3><p>Admin Panel de Rumble, Gravité et Eagle ajouté et le fruit Spin a été ajouté</p></div>
+        <div class="fruit-card"><h3>Update 3</h3><p> Guides et Astuces mis à jour, le fruit Blade a été ajouté et des textes ont été modifié. </p></div>
       </div>
   </section>  <section id="fruits" class="content">
     <h2> Liste des Fruits</h2>
     <div class="fruits-grid">
       <div class="fruit-card"><h3>Rocket</h3><p> Lance des fusée !</p></div>
       <div class="fruit-card"><h3>Spin</h3><p>Tourne sur toi même et attaque par le vent  !</p></div>
-      <div class="fruit-card"><h3>Light</h3><p>Déplace-toi à la vitesse de la lumière.</p></div>
+      <div class="fruit-card"><h3>Blade</h3><p>Lance des épées !</p></div>
     </div>
   </section>  <section id="guides" class="content">
     <h2>📘 Guides et Astuces</h2>
     <ul>
-      Comment obtenir des fruits rares ?</li>
-         <div class="fruit-card"><h3></h3><p> À Venir.</p></div>
+      Comment obtenir des fruits ?
+         <div class="fruit-cardGuides"><h3></h3><p> Pour obtenir des fruits  vous drvez vous rendre au gacha auprès de Zioles.</p></div>
     </div>
-      Les meilleurs combos de pouvoirs.</li>
-         <div class="fruit-card"><h3></h3><p>À Venir.</p></div>
+      Le meilleur combo de Fruits.
+         <div class="fruit-cardGuides"><h3></h3><p>Le meilleur combo du jeu actuellement est GodHuman et Dough.</p></div>
     </div>
-      Comment farmer efficacement l'XP.</li>
-         <div class="fruit-card"><h3></h3><p>À Venir.</p></div>
+      Comment farmer efficacement l'XP
+         <div class="fruit-cardGuides"><h3></h3><p>Pour farmez efficacement utilisez un fruit comme Light ou Buddha.</p></div>
     </div>
     </ul>
     
@@ -179,13 +187,13 @@ footer {
   
   </section>  <footer id="contact">
     <p>Contact : <a href="mailto:contact@ostralionytb.com">@ostralionytb.com</a></p>
-    <p>© 2025 Blox Fruits Fan Site -- Créé par des fans pour des fans.</p>
+    <p>© 2025 Blox Fruits Fan Site -- Créé par ℜ𝔞𝔭𝔥 pour des fans.</p>
   </footer>  <script>
     // === SCRIPT JAVASCRIPT ===
     const exploreBtn = document.getElementById('exploreBtn');
     exploreBtn.addEventListener('click', () => {
       window.scrollTo({
-        top: document.getElementById('fruits').offsetTop - 50,
+        top: document.getElementById('News').offsetTop - 50,
         behavior: 'smooth'
       });
     });
