@@ -113,7 +113,13 @@ nav a:hover {
   text-align: center;
   transition: 0.3s;
 }
-
+.fruit-cardGUIGUIDES {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding : 12px;
+  text-align: center;
+  transition: 0.3s;
+}
 .fruit-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px #00d4ff;
@@ -136,11 +142,11 @@ footer {
   </header>  <section id="accueil" class="hero">
     <h2>Bienvenue sur le fan site de Blox Fruits !</h2>
     <p>Découvre les meilleurs fruits, astuces et secrets de Blox Fruits.</p>
-    <button id="exploreBtn">Explorer</button>
+    <button id="exploreBtn">Jouer</button>
   </section>  <section id="News" class="content">
     <h2> Update du site</h2> 
     <div class="fruits-grid">
-        <div class="fruit-card"><h3>Update 3</h3><p> Guides et Astuces mis à jour, le fruit Blade a été ajouté et des textes ont été modifié. </p></div>
+        <div class="fruit-card"><h3>Update 4</h3><p>Tous les fruits Communs ont été ajoutés, Admin Panel de Création ajoutée, Guides et Astuces mis à jour et le bouton Explorer est devenue Jouer !</p></div>
       </div>
   </section>  <section id="fruits" class="content">
     <h2> Liste des Fruits</h2>
@@ -148,19 +154,22 @@ footer {
       <div class="fruit-card"><h3>Rocket</h3><p> Lance des fusée !</p></div>
       <div class="fruit-card"><h3>Spin</h3><p>Tourne sur toi même et attaque par le vent  !</p></div>
       <div class="fruit-card"><h3>Blade</h3><p>Lance des épées !</p></div>
+     <div class="fruit-card"><h3>Spring</h3><p>Rebondis sur le sol !</p></div>
+   <div class="fruit-card"><h3>Bomb</h3><p>Crée des bombes et fait les exploser !</p></div> 
+      <div class="fruit-card"><h3>Smoke</h3><p>Lance de la fumée pour attaquer les joueurs !</p></div>
+      <div class="fruit-card"><h3>Spike</h3><p>Fais rebondir le sol avec des piques !</p></div>
     </div>
   </section>  <section id="guides" class="content">
     <h2>📘 Guides et Astuces</h2>
     <ul>
-      Comment obtenir des fruits ?
-         <div class="fruit-cardGuides"><h3></h3><p> Pour obtenir des fruits  vous drvez vous rendre au gacha auprès de Zioles.</p></div>
-    </div>
-      Le meilleur combo de Fruits.
-         <div class="fruit-cardGuides"><h3></h3><p>Le meilleur combo du jeu actuellement est GodHuman et Dough.</p></div>
-    </div>
-      Comment farmer efficacement l'XP
-         <div class="fruit-cardGuides"><h3></h3><p>Pour farmez efficacement utilisez un fruit comme Light ou Buddha.</p></div>
-    </div>
+      <div class="fruit-cardGUIGUIDES"><h3>Guides et Astuces</h3><p>
+            <div class="fruit-cardGuides">Comment obtenir des fruits ?</h3><p>Pour obtenir des fruits  vous devez vous rendre au gacha auprès de Zioles.<h3> </p></div>
+  <div class="fruit-cardGuides"><h3>Quelle est le meilleur combo de Fruits ?</h3>Quelle est le meilleur combo du jeu ?<p>Le meilleur combo du jeu actuellement est GodHuman et Dough.</p></div>
+   
+         <div class="fruit-cardGuides"><h3>Comment farmer efficacement l'XP ?</h3><p>Pour farmez efficacement utilisez un fruit comme Light ou Buddha.</p></div>
+   <div>
+   
+   <div class="fruit-cardGuides"><h3>Comment passer Sea 2 ?</h3><p>Pour passer Sea 2 vous devez atteindre le niveau 700.
     </ul>
     
       </section>  <section id="V2" class="content">
@@ -181,8 +190,7 @@ footer {
       <div class="fruit-card"><h3>Eagle</h3><p>Améliore la vitesse de vol du mouvement de vol [F] d'Eagle , d'environ 18,5 % ( valeur estimée ).
       La durée du compteur de plumes est doublée, passant de 100 à 200 secondes. La consommation des compteurs [M1] Attaque normale et [F] Vol (maintenu) est réduite de 50 %.
       Permet au joueur de se précipiter dans les airs en maintenant la touche [F] enfoncée pendant que le vol est actif.</p></div>
-      <div class="fruit-card"><h3>Buddha</h3><p>Devient Géant.</p></div>
-      <div class="fruit-card"><h3>Magma</h3><p>Déclanche encore plus de lave.</p></div>
+      <div class="fruit-card"><h3>Création</h3><p> Admin Panel en création (INFOS CONNUES : VOITURE CONDUISABLE)</p></div>
     </div>
   
   </section>  <footer id="contact">
@@ -191,12 +199,9 @@ footer {
   </footer>  <script>
     // === SCRIPT JAVASCRIPT ===
     const exploreBtn = document.getElementById('exploreBtn');
-    exploreBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: document.getElementById('News').offsetTop - 50,
-        behavior: 'smooth'
-      });
-    });
+exploreBtn.addEventListener('click', () => {
+  window.open('https://www.roblox.com/games/2753915549/Blox-Fruits', '_blank');
+});
 
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
