@@ -1,155 +1,214 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blox Fruits Fan Site</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     /* === STYLE CSS === */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-     background: linear-gradient(180deg, #000000 0%, #001f3f 40%, #0066cc 100%);
+      background: linear-gradient(180deg, #000000 0%, #001f3f 40%, #0066cc 100%);
       color: white;
       overflow-x: hidden;
-    }header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(6px);
-}
+      scroll-behavior: smooth;
+    }
 
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #00d4ff;
-  text-shadow: 0 0 10px #00d4ff;
-}
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
+    .logo {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #00d4ff;
+      text-shadow: 0 0 10px #00d4ff;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-nav a:hover {
-  color: #00d4ff;
-  text-shadow: 0 0 8px #00d4ff;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 12px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      transition: 0.3s;
+      font-size: 0.9em;
+    }
 
-.hero {
-  height: 100vh;
-  background: url() center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: Up;
-  align-items: Up;
-  text-align: Up;
-  padding-top: 100px;
-}
+    nav a:hover {
+      color: #00d4ff;
+      background: rgba(255, 255, 255, 0.2);
+      text-shadow: 0 0 8px #00d4ff;
+      transform: scale(1.05);
+    }
 
-.hero h2 {
-  font-size: 3em;
-  text-shadow: 0 0 20px black;
-}
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px 0;
+    }
 
-.hero button {
-  margin-top: 20px;
-  padding: 15px 5px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 8px;
-  background: #f1c40f;
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    .hero h2 {
+      font-size: 2.3em;
+      text-shadow: 0 0 20px black;
+    }
 
-.hero button:hover {
-  transform: scale(1.1);
-  background: #00a3cc;
-}
+    .hero p {
+      font-size: 1em;
+      max-width: 90%;
+      margin: 10px auto;
+    }
 
-.content {
-  padding: 80px 40px;
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 50px;
-  border-radius: 10px;
-}
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background: #f1c40f;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.fruits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
+    .hero button:hover {
+      transform: scale(1.1);
+      background: #00a3cc;
+    }
 
-.fruit-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  transition: 0.3s;
-}
+    /* CONTENT SECTIONS */
+    .content {
+      padding: 80px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 80px;
+      border-radius: 10px;
+    }
 
-.fruit-cardGuides {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding : 20px;
-  text-align: center;
-  transition: 0.3s;
-}
-.fruit-cardGUIGUIDES {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding : 12px;
-  text-align: center;
-  transition: 0.3s;
-}
-.fruit-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #00d4ff;
-}
+    .content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.8);
-  margin-top: 40px;
-  font-size: 0.9em;
-}
+    .fruits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
 
+    .fruit-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
+      font-size: 0.9em;
+    }
+
+    .fruit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px #00d4ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      margin-top: 40px;
+      font-size: 0.85em;
+    }
+
+    /* --- MOBILE OPTIMISATION --- */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      nav ul {
+        gap: 6px;
+      }
+
+      .logo {
+        font-size: 1.2em;
+      }
+
+      .hero h2 {
+        font-size: 1.8em;
+      }
+
+      .hero button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+
+      .content {
+        padding: 60px 15px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
- 
+    <div class="logo">Blox Fruits</div>
+    <nav>
+      <ul>
+        <li><a href="#News">Update</a></li>
+        <li><a href="#fruits">Fruits</a></li>
+        <li><a href="#guides">Guides</a></li>
+        <li><a href="#V2">V2</a></li>
+      </ul>
     </nav>
-  </header>  <section id="accueil" class="hero">
+  </header>
+
+  <section id="accueil" class="hero">
     <h2>Bienvenue sur le fan site de Blox Fruits !</h2>
-    <p>Découvre les meilleurs fruits, astuces et secrets de Blox Fruits.</p>
+    <p>Découvre les meilleurs fruits, astuces et secrets du jeu -- et accède directement à la page officielle Roblox !</p>
     <button id="exploreBtn">Jouer</button>
-  </section>  <section id="News" class="content">
-    <h2> Update du site</h2> 
+  </section>
+
+  <section id="News" class="content">
+    <h2>🌀 Update du site</h2> 
     <div class="fruits-grid">
-        <div class="fruit-card"><h3>Update 4</h3><p>Tous les fruits Communs ont été ajoutés, Admin Panel de Création ajoutée, Guides et Astuces mis à jour et le bouton Explorer est devenue Jouer !</p></div>
-      </div>
-  </section>  <section id="fruits" class="content">
-    <h2> Liste des Fruits</h2>
+      <div class="fruit-card"><h3>Update 5</h3><p>UI Totalement refait + nouveaux boutons</p></div>
+    </div>
+  </section>
+
+  <section id="fruits" class="content">
+    <h2>🍎 Liste des Fruits</h2>
     <div class="fruits-grid">
       <div class="fruit-card"><h3>Rocket</h3><p> Lance des fusée !</p></div>
       <div class="fruit-card"><h3>Spin</h3><p>Tourne sur toi même et attaque par le vent  !</p></div>
@@ -158,50 +217,44 @@ footer {
    <div class="fruit-card"><h3>Bomb</h3><p>Crée des bombes et fait les exploser !</p></div> 
       <div class="fruit-card"><h3>Smoke</h3><p>Lance de la fumée pour attaquer les joueurs !</p></div>
       <div class="fruit-card"><h3>Spike</h3><p>Fais rebondir le sol avec des piques !</p></div>
-    </div>
-  </section>  <section id="guides" class="content">
+   <div class="fruit-card"><h3>Flame</h3><p>Balance des flammes pour brûler vos enemis !</p></div>
+    <div class="fruit-card"><h3>Ice</h3><p>Crée de la glace pour congeler vos ennemis !</p></div>
+   <div class="fruit-card"><h3>Sand</h3><p>Utilise le sable pour rendre aveugle votre adversaire !</p></div>
+   <div class="fruit-card"><h3>Dark</h3><p>Fais resentir la douleur qui devient noir dans l'ame !</p></div>
+  <div class="fruit-card"><h3>Eagle</h3><p>Utilise tes ailes pour attaquer et voler !</p></div>
+   <div class="fruit-card"><h3>Diamond</h3><p>Jette des éclats pour figer vos enemis !</p></div>
+   </div>
+  </section>
+
+  <section id="guides" class="content">
     <h2>📘 Guides et Astuces</h2>
-    <ul>
-      <div class="fruit-cardGUIGUIDES"><h3>Guides et Astuces</h3><p>
-            <div class="fruit-cardGuides">Comment obtenir des fruits ?</h3><p>Pour obtenir des fruits  vous devez vous rendre au gacha auprès de Zioles.<h3> </p></div>
-  <div class="fruit-cardGuides"><h3>Quelle est le meilleur combo de Fruits ?</h3>Quelle est le meilleur combo du jeu ?<p>Le meilleur combo du jeu actuellement est GodHuman et Dough.</p></div>
-   
-         <div class="fruit-cardGuides"><h3>Comment farmer efficacement l'XP ?</h3><p>Pour farmez efficacement utilisez un fruit comme Light ou Buddha.</p></div>
-   <div>
-   
-   <div class="fruit-cardGuides"><h3>Comment passer Sea 2 ?</h3><p>Pour passer Sea 2 vous devez atteindre le niveau 700.
-    </ul>
-    
-      </section>  <section id="V2" class="content">
-       <h2> V2 et Admin Panel </h2>
     <div class="fruits-grid">
-        <div class="fruit-card"><h3>Pain</h3><p>Augmente la durée de la forme éveillée. (De 30 à 60 s) 
-         [F] Torment Warp maintenu débloque désormais la puissance d'une explosion Drop Kick. 
-         [Z] Les fantômes de douleur de la version tap de l'attaque Fury Jab recherchent désormais la chaleur vers l'ennemi. 
-         [Z] Les fantômes de douleur de la version tap de l'attaque Fury Jab recherchent désormais la chaleur vers l'ennemi. 
-         [C] Agony Nuke débloque la capacité de charger dans un rayon.</p></div>
-      <div class="fruit-card"><h3>Rumble</h3><p>Les orbes de foudre se rechargent plus rapidement.
-      Les nuages ​​​​de [X] peuvent absorber les orbes de foudre de l'utilisateur pour prolonger leur durée.
-      Une troisième variante de [Z] entièrement chargée peut désormais attraper des joueurs.
-      Envoyer une troisième variante de [Z] entièrement chargée dans les nuages ​​de [X] enverra désormais un dragon plus gros des nuages ​​vers votre curseur.</p></div>
-    <div class="fruit-card"><h3>Gravity</h3><p>Améliore la capacité [M1], permettant au joueur de maintenir son [M1] pour plus de dégâts et de portée.
-    Améliore davantage la capacité [M1], permettant au joueur de maintenir son [M1] pour encore plus de dégâts et de portée.
-    Accorde un compteur de force gravitationnelle et améliore la capacité [C], modifiant sa fonctionnalité et infligeant plus de dégâts lorsqu'il est maintenu à pleine capacité de compteur de force gravitationnelle.</p></div>
-      <div class="fruit-card"><h3>Eagle</h3><p>Améliore la vitesse de vol du mouvement de vol [F] d'Eagle , d'environ 18,5 % ( valeur estimée ).
-      La durée du compteur de plumes est doublée, passant de 100 à 200 secondes. La consommation des compteurs [M1] Attaque normale et [F] Vol (maintenu) est réduite de 50 %.
-      Permet au joueur de se précipiter dans les airs en maintenant la touche [F] enfoncée pendant que le vol est actif.</p></div>
-      <div class="fruit-card"><h3>Création</h3><p> Admin Panel en création (INFOS CONNUES : VOITURE CONDUISABLE)</p></div>
+      <div class="fruit-card"><h3>Obtenir des fruits</h3><p>Rendez-vous au gacha de Zioles.</p></div>
+      <div class="fruit-card"><h3>Meilleur combo</h3><p>GodHuman + Dough dominent le jeu.</p></div>
+      <div class="fruit-card"><h3>Farmer l'XP</h3><p>Utilise Light ou Buddha pour progresser vite.</p></div>
     </div>
-  
-  </section>  <footer id="contact">
+  </section>
+
+  <section id="V2" class="content">
+    <h2>⚡ V2 & Admin Panel</h2>
+    <div class="fruits-grid">
+      <div class="fruit-card"><h3>Pain</h3><p>Forme éveillée améliorée.</p></div>
+      <div class="fruit-card"><h3>Rumble</h3><p>Recharge plus rapide.</p></div>
+      <div class="fruit-card"><h3>Création</h3><p>Admin Panel en développement.</p></div>
+    </div>
+  </section>
+
+  <footer>
     <p>Contact : <a href="mailto:contact@ostralionytb.com">@ostralionytb.com</a></p>
-    <p>© 2025 Blox Fruits Fan Site -- Créé par ℜ𝔞𝔭𝔥 pour des fans.</p>
-  </footer>  <script>
+    <p>© 2025 Blox Fruits Fan Site -- Créé par ℜ𝔞𝔭𝔥 pour les fans.</p>
+  </footer>
+
+  <script>
     // === SCRIPT JAVASCRIPT ===
     const exploreBtn = document.getElementById('exploreBtn');
-exploreBtn.addEventListener('click', () => {
-  window.open('https://www.roblox.com/games/2753915549/Blox-Fruits', '_blank');
-});
+    exploreBtn.addEventListener('click', () => {
+      window.open('https://www.roblox.com/games/2753915549/Blox-Fruits', '_blank');
+    });
 
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
@@ -211,5 +264,6 @@ exploreBtn.addEventListener('click', () => {
         header.style.background = 'rgba(0, 0, 0, 0.4)';
       }
     });
-  </script></body>
+  </script>
+</body>
 </html>
